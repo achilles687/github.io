@@ -1,0 +1,156 @@
+.container {
+    background-color: #333; /* Dark grey */
+    border: 3px solid #000; /* Black border */
+    border-radius: 10px; /* Rounded corners */
+
+    /* Set up dimensions and position for the piano body. */
+    width: 760px;
+    height: 212px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+
+    /* Add some padding for the keys. */
+    padding: 14px;
+}
+
+body {
+    display: flex;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.white-keys kbd{
+    display: inline-block;
+    width: 70px;
+    height: 200px;
+    margin: 0px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    line-height: 200px;
+    z-index: 0;
+}
+
+.black-keys{
+    position: absolute;
+}
+.black-keys kbd{
+
+    position: relative;
+
+    top: -211px;
+
+    left: -20px;
+
+    display: inline-block;
+
+    width: 50px;
+
+    height: 150px;
+
+    margin: 5px;
+
+    background-color: black;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    color: white;
+
+    text-align: center;
+
+    line-height: 200px;
+
+    z-index: 1;
+}
+
+#keyW {
+    position: relative;
+    left: 45px;
+}
+
+#keyE {
+    position: relative;
+    left: 57px;
+}
+
+#keyT {
+    position: relative;
+    left: 145px;
+}
+
+#keyY {
+    position: relative;
+    left: 156px;
+}
+
+.black-keys #keyU {
+    position: relative;
+    left: 168px;
+}
+
+.black-keys #keyO {
+    position: relative;
+    left: 257px;
+}
+.black-keys #keyP {
+    position: relative;
+    left: 268px;
+}
+
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flash {
+    animation: flash 0.2s linear;
+}
+
+@keyframes flash {
+    0% {
+        background-color: white;
+    }
+    50% {
+        background-color: mediumpurple;
+    }
+    100% {
+        background-color: white;
+    }
+}
